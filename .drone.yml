@@ -20,3 +20,9 @@ steps:
         Branch: <https://github.com/{{ repo.owner }}/{{ repo.name }}/commits/{{ build.branch }}|{{ build.branch }}>
         Author: {{ build.author }}
         <{{ build.link }}|Visit build page ↗>
+---
+kind: secret
+name: SLACK_WEBHOOK
+get:
+  path: slack-webhook
+  name: backend_url
